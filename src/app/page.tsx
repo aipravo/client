@@ -1,0 +1,126 @@
+"use client";
+import LinkBtn from '@/components/LinkBtn/LinkBtn';
+import Logo from '@/components/Logo/Logo';
+import TitleH1 from '@/components/TitleH1/TitleH1';
+import TitleH4 from '@/components/TitleH4/TitleH4';
+import Link from 'next/link';
+import { useState } from 'react';
+import { Accordion } from 'react-bootstrap';
+
+
+
+export default function Home() {
+
+	const [loading] = useState(false);
+
+	return (
+		<section className='home h100vh d-flex align-items-center justify-content-between py-5'>
+			<div className=" container">
+				<div className=" row">
+					<div className=" col-lg-6 mb-5">
+						<div className=" d-flex align-items-center h-100 flex-column gap-4 home_wrap">
+							<Logo
+								width={160}
+								height={159}
+								alt='AIПраво логотип'
+							/>
+							<TitleH1
+								span='Право'
+							>
+								Ai
+							</TitleH1>
+							<TitleH4>ИИ ассистент для Юристов</TitleH4>
+							<div className=' d-flex flex-column gap-3 align-items-center justify-content-center w-100'>
+								<LinkBtn
+									href='/login'
+									clazz='filled'
+									disabled={loading}
+								>
+									Войти
+								</LinkBtn>
+								<LinkBtn
+									href='/registration'
+									clazz='outlined'
+									disabled={loading}
+								>
+									Зарегистрироваться
+								</LinkBtn>
+							</div>
+						</div>
+					</div>
+					<div className=" col-lg-6">
+						<div className=" d-flex align-items-center justify-content-center flex-column gap-3">
+							<h2>Как пользоваться</h2>
+							<Accordion defaultActiveKey="0" className=' w-100'>
+								<Accordion.Item eventKey="0">
+									<Accordion.Header>Регистрация</Accordion.Header>
+									<Accordion.Body className='px-3 py-2'>
+										<ol className="list-group list-group-numbered ">
+											<li className="list-group-item border-0 px-3 py-1">
+												Перейдите на страницу&nbsp;
+												<Link
+													href='/registration'
+													className='accordion_link'
+												>регистрации</Link>
+											</li>
+											<li className="list-group-item border-0 px-3 py-1">Введите вашу почту, придумайте пароль, повторите пароль</li>
+											<li className="list-group-item border-0 px-3 py-1">Перейдите по ссылке в письме, полученном на вашу почту</li>
+										</ol>
+									</Accordion.Body>
+								</Accordion.Item>
+								<Accordion.Item eventKey="1">
+									<Accordion.Header>Авторизация</Accordion.Header>
+									<Accordion.Body>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in
+										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</Accordion.Body>
+								</Accordion.Item>
+								<Accordion.Item eventKey="2">
+									<Accordion.Header>Авторизация</Accordion.Header>
+									<Accordion.Body>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in
+										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</Accordion.Body>
+								</Accordion.Item>
+								<Accordion.Item eventKey="3">
+									<Accordion.Header>Авторизация</Accordion.Header>
+									<Accordion.Body>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in
+										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</Accordion.Body>
+								</Accordion.Item>
+								<Accordion.Item eventKey="4">
+									<Accordion.Header>Авторизация</Accordion.Header>
+									<Accordion.Body>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in
+										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</Accordion.Body>
+								</Accordion.Item>
+							</Accordion>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+}
