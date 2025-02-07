@@ -90,7 +90,10 @@ const Requests: FC = () => {
 										)
 									}
 									<td className="text-center">
-										<Link href={`/dashboard/request/${req.id}`} className="request_detail">
+										<Link
+											href={`/dashboard/request/${req.id}`}
+											className="request_detail"
+										>
 											Детали
 										</Link>
 									</td>
