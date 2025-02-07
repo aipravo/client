@@ -21,7 +21,7 @@ export default async function RootLayout({
 	return (
 		<ProtectedRoute role='ADMIN'>
 			<AdminProvider>
-				<main className=' container-fluid h-100 overflow-y-auto'>
+				<main className='container-fluid h-100 overflow-y-auto'>
 					<article className=' row h-100 overflow-y-auto'>
 						<aside className=' col-12 col-xl-2 col-md-3 pe-4 pe-md-0 py-3 pb-3 h100vh aside'>
 							<AsideAdmin />
