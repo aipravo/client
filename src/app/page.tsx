@@ -29,7 +29,7 @@ export default function Home() {
 							>
 								Ai
 							</TitleH1>
-							<TitleH4>ИИ ассистент для Юристов</TitleH4>
+							<TitleH4>ИИ ассистент в юридической сфере</TitleH4>
 							<div className=' d-flex flex-column gap-3 align-items-center justify-content-center w-100'>
 								<LinkBtn
 									href='/login'
@@ -70,50 +70,34 @@ export default function Home() {
 								</Accordion.Item>
 								<Accordion.Item eventKey="1">
 									<Accordion.Header>Авторизация</Accordion.Header>
-									<Accordion.Body>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-										aliquip ex ea commodo consequat. Duis aute irure dolor in
-										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-										culpa qui officia deserunt mollit anim id est laborum.
+									<Accordion.Body className='px-3 py-2'>
+										<ol className="list-group list-group-numbered ">
+											<li className="list-group-item border-0 px-3 py-1">
+												Перейдите на страницу&nbsp;
+												<Link
+													href='/login'
+													className='accordion_link'
+												>авторизации</Link>
+											</li>
+											<li className="list-group-item border-0 px-3 py-1">Введите почту, которую указали при регистрации, введите пароль</li>
+										</ol>
 									</Accordion.Body>
 								</Accordion.Item>
 								<Accordion.Item eventKey="2">
-									<Accordion.Header>Авторизация</Accordion.Header>
-									<Accordion.Body>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-										aliquip ex ea commodo consequat. Duis aute irure dolor in
-										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-										culpa qui officia deserunt mollit anim id est laborum.
-									</Accordion.Body>
-								</Accordion.Item>
-								<Accordion.Item eventKey="3">
-									<Accordion.Header>Авторизация</Accordion.Header>
-									<Accordion.Body>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-										aliquip ex ea commodo consequat. Duis aute irure dolor in
-										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-										culpa qui officia deserunt mollit anim id est laborum.
-									</Accordion.Body>
-								</Accordion.Item>
-								<Accordion.Item eventKey="4">
-									<Accordion.Header>Авторизация</Accordion.Header>
-									<Accordion.Body>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-										minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-										aliquip ex ea commodo consequat. Duis aute irure dolor in
-										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-										culpa qui officia deserunt mollit anim id est laborum.
+									<Accordion.Header>Сброс пароля</Accordion.Header>
+									<Accordion.Body className='px-3 py-2'>
+										<ol className="list-group list-group-numbered ">
+											<li className="list-group-item border-0 px-3 py-1">
+												Перейдите на страницу&nbsp;
+												<Link
+													href='/reset'
+													className='accordion_link'
+												>сброс пароля</Link>
+											</li>
+											<li className="list-group-item border-0 px-3 py-1">Введите почту, которую указали при регистрации</li>
+											<li className="list-group-item border-0 px-3 py-1">Перейдите по ссылке в письме, полученном на вашу почту</li>
+											<li className="list-group-item border-0 px-3 py-1">Придумайте новый пароль, повторите пароль</li>
+										</ol>
 									</Accordion.Body>
 								</Accordion.Item>
 							</Accordion>
