@@ -17,7 +17,7 @@ export default function Home() {
 		<section className='home h100vh d-flex align-items-center justify-content-between py-5'>
 			<div className=" container">
 				<div className=" row">
-					<div className=" col-lg-6 mb-5">
+					<div className=" col-lg-6 mb-5 mb-md-0">
 						<div className=" d-flex align-items-center h-100 flex-column gap-4 home_wrap">
 							<Logo
 								width={160}
