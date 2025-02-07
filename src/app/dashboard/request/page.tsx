@@ -74,7 +74,10 @@ const Requests: FC = () => {
 									<th scope="col" style={{ width: '5%' }} className=' text-center'>Попытки</th>
 								)
 							}
-							<th scope="col" style={{ width: '10%' }} className=' text-center'>Действия</th>
+							<th
+								scope="col"
+								style={{ width: '10%' }}
+								className=' text-center'>Действия</th>
 						</tr>
 					</thead>
 					<tbody className=' overflow-y-auto'>
