@@ -94,8 +94,8 @@ const Dashboard: FC = () => {
 											{msg.files.map((file, idx) => (
 												<span
 													key={idx}
-													data-url={`${process.env.NEXT_PUBLIC_SERVER_IMG}/${file}`}
-													onClick={() => handleOpenModal(`${process.env.NEXT_PUBLIC_SERVER_IMG}/${file}`)}
+													data-url={`${process.env.NEXT_PUBLIC_SERVER}/${file}`}
+													onClick={() => handleOpenModal(`${process.env.NEXT_PUBLIC_SERVER}/${file}`)}
 													className='request_detail lh-1'
 												>
 													{`Файл ${idx + 1}`}
