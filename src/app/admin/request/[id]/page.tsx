@@ -167,7 +167,7 @@ const Dashboard: FC = () => {
 			}
 			return;
 		}
-
+		setError('')
 		setFiles(files);
 		setFormData(prevFormData => ({
 			...prevFormData,
