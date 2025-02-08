@@ -50,14 +50,13 @@ const Dashboard: FC = () => {
 		} finally {
 			setLoading(false)
 		}
-	}, [])
+	}, [id])
 	useEffect(() => {
 		if (menu) {
-			setMenu(!menu)
+			setMenu(false);
 		}
-
-		fetchRequest()
-	}, [fetchRequest])
+		fetchRequest();
+	}, [fetchRequest]);
 
 	const fetchMessages = useCallback(async () => {
 		try {
@@ -78,7 +77,7 @@ const Dashboard: FC = () => {
 		} finally {
 			setLoading(false)
 		}
-	}, [])
+	}, [id])
 
 	useEffect(() => {
 		fetchMessages()
@@ -107,6 +106,7 @@ const Dashboard: FC = () => {
 			if (fileInputRef.current) {
 				fileInputRef.current.value = ""
 			}
+			console.log(formData);
 
 			const response = await createMessage(formData)
 
@@ -130,10 +130,11 @@ const Dashboard: FC = () => {
 
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
 		if (e.key === 'Enter' && !e.shiftKey) {
-			e.preventDefault()
-			handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>)
+			e.preventDefault();
+			handleSubmit(new Event('submit') as unknown as React.FormEvent<HTMLFormElement>);
 		}
-	}
+	};
+
 
 	const updateMessages = (newMessage: Message) => {
 		setMessages(prevMessages => [...prevMessages, newMessage])
@@ -146,26 +147,26 @@ const Dashboard: FC = () => {
 	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setContent(e.target.value)
-		if (e.target.value) {
-			setFormData(prevFormData => ({
-				...prevFormData,
-				content: e.target.value,
-			}))
-		}
-	}
+		const value = e.target.value;
+		setContent(value);
+		setFormData(prevFormData => ({
+			...prevFormData,
+			content: value,
+		}));
+	};
+
 
 	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const files = e.target.files ? Array.from(e.target.files) : []
-		setFiles(files)
-		if (e.target.files) {
-			const filesArray = Array.from(e.target.files)
-			setFormData(prevFormData => ({
-				...prevFormData,
-				files: filesArray,
-			}))
-		}
+		if (!e.target.files) return // Защита от null
+
+		const files = Array.from(e.target.files)
+
+		setFormData(prevFormData => ({
+			...prevFormData,
+			files,
+		}))
 	}
+
 
 	const handleOpenModal = (url: string) => {
 		setPdfUrl(url);
@@ -239,7 +240,7 @@ const Dashboard: FC = () => {
 					multiple
 					onChange={handleFileChange}
 					ref={fileInputRef}
-					accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+					accept="application/pdf, application/msword"
 					className='fileField'
 					disabled={spinner}
 				/>
