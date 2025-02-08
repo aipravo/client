@@ -157,15 +157,24 @@ const Dashboard: FC = () => {
 
 
 	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		if (!e.target.files) return // Защита от null
+		const files = e.target.files ? Array.from(e.target.files) : [];
 
-		const files = Array.from(e.target.files)
+		if (files.length > 2) {
+			setError("Можно загрузить не более 2 файлов!");
+			setFiles([])
+			if (fileInputRef.current) {
+				fileInputRef.current.value = ""
+			}
+			return;
+		}
 
+		setFiles(files);
 		setFormData(prevFormData => ({
 			...prevFormData,
 			files,
-		}))
-	}
+		}));
+	};
+
 
 
 	const handleOpenModal = (url: string) => {
@@ -237,6 +246,7 @@ const Dashboard: FC = () => {
 					id='uploadFile'
 					hidden
 					type="file"
+					multiple
 					onChange={handleFileChange}
 					ref={fileInputRef}
 					accept=".pdf, .docx"
