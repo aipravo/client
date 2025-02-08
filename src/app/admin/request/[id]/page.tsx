@@ -240,7 +240,7 @@ const Dashboard: FC = () => {
 					multiple
 					onChange={handleFileChange}
 					ref={fileInputRef}
-					accept="application/pdf, application/msword"
+					accept=".pdf, .docx"
 					className='fileField'
 					disabled={spinner}
 				/>
