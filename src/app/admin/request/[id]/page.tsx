@@ -237,7 +237,6 @@ const Dashboard: FC = () => {
 					id='uploadFile'
 					hidden
 					type="file"
-					multiple
 					onChange={handleFileChange}
 					ref={fileInputRef}
 					accept=".pdf, .docx"
