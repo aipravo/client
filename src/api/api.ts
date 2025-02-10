@@ -151,7 +151,7 @@ export const createMessage = (data: IMessage): Promise<string> => {
         });
     }
 
-    return apiRequest("/request/send", "POST", formData);
+    return apiRequest("/request/learn", "POST", formData);
 };
 
 export const auth = () => {
