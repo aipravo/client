@@ -186,6 +186,10 @@ a {
 .messages.statistics {
     height: calc(100vh - 32px);
 }
+.messages ol,
+.messages ul {
+    list-style: none;
+}
 .messages {
     overflow-y: auto;
     height: calc(100vh - 96px);

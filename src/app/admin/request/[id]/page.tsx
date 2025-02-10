@@ -1,7 +1,7 @@
 'use client'
 import InputForm from '@/components/InputForm/InputForm'
-import Markdown from 'react-markdown'
-import remarkGfm from "remark-gfm";
+// import Markdown from 'react-markdown'
+// import remarkGfm from "remark-gfm";
 import { useCallback, useEffect, useRef, useState, type FC } from 'react'
 import { IMessage, Message } from '../interface'
 import SpinnerBtn from '@/components/SpinnerBtn/SpinnerBtn'
@@ -221,9 +221,9 @@ const Dashboard: FC = () => {
 									</div>
 								) : null
 							}
-							<Markdown remarkPlugins={[remarkGfm]}>
+							<pre>
 								{msg.content}
-							</Markdown>
+							</pre>
 						</div>
 					))
 					:
