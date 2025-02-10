@@ -2,7 +2,6 @@
 import InputForm from '@/components/InputForm/InputForm'
 import Markdown from 'react-markdown'
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from 'rehype-highlight'
 import { useCallback, useEffect, useRef, useState, type FC } from 'react'
 import { IMessage, Message } from '../interface'
 import SpinnerBtn from '@/components/SpinnerBtn/SpinnerBtn'
