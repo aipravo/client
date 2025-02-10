@@ -222,7 +222,9 @@ const Dashboard: FC = () => {
 									</div>
 								) : null
 							}
-							<Markdown remarkPlugins={[remarkGfm]}>{msg.content}</Markdown>
+							<Markdown remarkPlugins={[remarkGfm]}>
+								{msg.content}
+							</Markdown>
 						</div>
 					))
 					:
