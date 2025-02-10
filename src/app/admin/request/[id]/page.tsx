@@ -2,6 +2,8 @@
 import InputForm from '@/components/InputForm/InputForm'
 import Markdown from 'react-markdown'
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from 'rehype-highlight'
+import "highlight.js/styles/github-dark.css";
 import { useCallback, useEffect, useRef, useState, type FC } from 'react'
 import { IMessage, Message } from '../interface'
 import SpinnerBtn from '@/components/SpinnerBtn/SpinnerBtn'
@@ -221,7 +223,10 @@ const Dashboard: FC = () => {
 									</div>
 								) : null
 							}
-							<Markdown remarkPlugins={[remarkGfm]}>
+							<Markdown
+								remarkPlugins={[remarkGfm]}
+								rehypePlugins={[rehypeHighlight]}
+							>
 								{msg.content}
 							</Markdown>
 						</div>
