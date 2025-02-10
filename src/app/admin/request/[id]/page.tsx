@@ -1,6 +1,7 @@
 'use client'
 import InputForm from '@/components/InputForm/InputForm'
 import Markdown from 'react-markdown'
+import remarkGfm from "remark-gfm";
 import rehypeHighlight from 'rehype-highlight'
 import { useCallback, useEffect, useRef, useState, type FC } from 'react'
 import { IMessage, Message } from '../interface'
@@ -221,7 +222,7 @@ const Dashboard: FC = () => {
 									</div>
 								) : null
 							}
-							<Markdown rehypePlugins={[rehypeHighlight]}>{msg.content}</Markdown>
+							<Markdown remarkPlugins={[remarkGfm]}>{msg.content}</Markdown>
 						</div>
 					))
 					:
