@@ -168,7 +168,7 @@ const Dashboard: FC = () => {
 		const files = e.target.files ? Array.from(e.target.files) : [];
 
 		if (files.length > 2) {
-			setError("Можно загрузить не более 2 файлов!");
+			setError("Можно загружать не более 2 файлов!");
 			setFiles([])
 			if (fileInputRef.current) {
 				fileInputRef.current.value = ""
