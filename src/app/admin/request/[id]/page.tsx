@@ -9,7 +9,7 @@ import { IMessage, Message } from '../interface'
 import SpinnerBtn from '@/components/SpinnerBtn/SpinnerBtn'
 import BtnForm from '@/components/BtnForm/BtnForm'
 import { useParams } from 'next/navigation'
-import { createMessage, getMessageById, getRequestById } from '@/api/api'
+import { createAdminMessage, getMessageById, getRequestById } from '@/api/api'
 import ToastError from '@/components/ToastError/ToastError'
 import Loader from '@/components/Loader/Loader'
 import { useAdmin } from '@/context/AdminContext'
@@ -110,7 +110,7 @@ const Dashboard: FC = () => {
 			}
 			console.log(formData);
 
-			const response = await createMessage(formData)
+			const response = await createAdminMessage(formData)
 
 			setFormData(prevFormData => ({
 				...prevFormData,

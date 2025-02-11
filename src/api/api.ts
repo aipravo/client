@@ -151,6 +151,24 @@ export const createMessage = (data: IMessage): Promise<string> => {
         });
     }
 
+    return apiRequest("/request/send", "POST", formData);
+};
+
+export const createAdminMessage = (data: IMessage): Promise<string> => {
+    const formData = new FormData();
+
+    // Добавляем поля из IMessage
+    formData.append("thread_id", data.thread_id);
+    formData.append("content", data.content);
+    formData.append("id", String(data.id));
+
+    // Добавляем файлы, если они есть
+    if (data.files) {
+        data.files.forEach((file) => {
+            formData.append("files", file);
+        });
+    }
+
     return apiRequest("/request/learn", "POST", formData);
 };
 
