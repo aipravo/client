@@ -116,6 +116,12 @@ const Dashboard: FC = () => {
 
 				const response = await createMessage(formData)
 
+				setFormData(prevFormData => ({
+					...prevFormData,
+					content: '',
+					files: []
+				}));
+
 				const aiMessage = { role: 'assistant', content: response }
 
 				updateMessages(aiMessage)

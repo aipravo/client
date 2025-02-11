@@ -38,6 +38,27 @@ const AsideAdmin: FC = () => {
 		}
 	}
 
+	const handleCreateTrainRequest = async () => {
+
+		setLoading(true)
+		try {
+			const response = await createVipRequest()
+			setThreadId(response.thread_id)
+
+			const requestPath = `/admin/training/${response.id}`
+			router.push(requestPath)
+		} catch (e) {
+			if (e instanceof Error) {
+				setError(e.message)
+			} else {
+				setError("Произошла неизвестная ошибка")
+			}
+		} finally {
+			setLoading(false)
+			setMenu(!menu)
+		}
+	}
+
 	const handleLogout = () => {
 		localStorage.removeItem('token')
 		localStorage.removeItem('role')
@@ -60,6 +81,14 @@ const AsideAdmin: FC = () => {
 				alt='AI'
 			/>
 			<div className={`d-flex flex-column gap-2 w-100 menu ${menu ? 'open' : ''}`}>
+				<LinkBtn
+					href='#'
+					clazz={location.startsWith('/admin/training/') ? 'filled' : 'outlined'}
+					disabled={loading}
+					onClick={handleCreateTrainRequest}
+				>
+					Обучение
+				</LinkBtn>
 				<LinkBtn
 					href='#'
 					clazz={location.startsWith('/admin/request/') ? 'filled' : 'outlined'}

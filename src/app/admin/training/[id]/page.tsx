@@ -5,11 +5,11 @@ import remarkGfm from "remark-gfm";
 import rehypeHighlight from 'rehype-highlight'
 import "highlight.js/styles/github-dark.css";
 import { useCallback, useEffect, useRef, useState, type FC } from 'react'
-import { IMessage, Message } from '../interface'
+import { IMessage, Message } from '../../request/interface'
 import SpinnerBtn from '@/components/SpinnerBtn/SpinnerBtn'
 import BtnForm from '@/components/BtnForm/BtnForm'
 import { useParams } from 'next/navigation'
-import { createMessage, getMessageById, getRequestById } from '@/api/api'
+import { createAdminMessage, getMessageById, getRequestById } from '@/api/api'
 import ToastError from '@/components/ToastError/ToastError'
 import Loader from '@/components/Loader/Loader'
 import { useAdmin } from '@/context/AdminContext'
@@ -110,7 +110,7 @@ const Dashboard: FC = () => {
 			}
 			console.log(formData);
 
-			const response = await createMessage(formData)
+			const response = await createAdminMessage(formData)
 
 			setFormData(prevFormData => ({
 				...prevFormData,
@@ -240,7 +240,7 @@ const Dashboard: FC = () => {
 					:
 					<div className=" h-100 w-100 d-flex justify-content-center align-items-center">
 						<div className=" col-md-6 mx-md-auto">
-							<h3 className=' m-0 text-center'>✨ Удачи! ✨</h3>
+							<h3 className=' m-0 text-center'>✨ Готов к обучению! ✨</h3>
 						</div>
 					</div>
 				}
@@ -287,7 +287,7 @@ const Dashboard: FC = () => {
 					{spinner
 						?
 						<SpinnerBtn
-							text='Думаю ...'
+							text='Обучаюсь ...'
 						/>
 						:
 						<span className=' d-flex align-items-center gap-2'>
