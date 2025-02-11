@@ -104,6 +104,10 @@ export const createVipRequest = (): Promise<IRequestRes> => {
     return apiRequest("/request/createvip", "POST");
 };
 
+export const createTrainRequest = () => {
+    return apiRequest("/request/train", "POST");
+};
+
 export const changeAdminPassword = (data: IAdminForm) => {
     return apiRequest<IAdminForm>("/user/change-admin-pass", "POST", data);
 };
