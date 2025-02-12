@@ -107,7 +107,7 @@ export default function ResetPassword({ params }: ResetPageProps) {
 											type='submit'
 											clazz='filled'
 											disabled={loading}>
-											{loading ? <SpinnerBtn /> : 'Сохранить пароль'}
+											{loading ? <SpinnerBtn /> : 'Сохранить новый пароль'}
 										</BtnForm>
 									</form>
 								</div>
