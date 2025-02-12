@@ -116,6 +116,7 @@ export default function ResetPassword({ params }: ResetPageProps) {
 					</div>
 				</div>
 			</section>
+
 			{error && <ToastError error={true}>{error}</ToastError>}
 		</>
 	);
