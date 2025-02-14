@@ -65,7 +65,7 @@ const Tariffs: FC = () => {
 			if (typeof window !== "undefined" && "tiptop" in window) {
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				const widget = new (window as any).tiptop.Widget(); // <--- Кастомный тип `any`
-				widget.pay('auth',
+				widget.pay('charge',
 					{
 						publicId: 'pk_acec0ef7b477906bfd88eb5215677',
 						description: 'Оплата запросов на aipravo.kz',
