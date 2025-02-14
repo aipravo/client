@@ -60,9 +60,9 @@ const Tariffs: FC = () => {
 
 	const handleBuy = async (req: Omit<ITariff, "id">) => {
 		try {
-			if (typeof window !== "undefined" && "cp" in window) {
+			if (typeof window !== "undefined" && "tiptop" in window) {
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
-				const widget = new (window as any).cp.CloudPayments(); // <--- Кастомный тип `any`
+				const widget = new (window as any).tiptop.Widget(); // <--- Кастомный тип `any`
 				widget.pay('auth',
 					{
 						publicId: 'test_api_00000000000000000000002',
