@@ -433,6 +433,21 @@ a {
 .save_btn {
     width: 48px !important;
 }
+.footer {
+    background-color: var(--text);
+    color: #fff;
+}
+.footer_links a {
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+}
+
+.footer_links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
 @media (max-width: 767px) {
     .aside {
         height: 64px;
