@@ -59,6 +59,8 @@ const Tariffs: FC = () => {
 	}, [])
 
 	const handleBuy = async (req: Omit<ITariff, "id">) => {
+		setSpinner(true)
+		setError('');
 		try {
 			if (typeof window !== "undefined" && "tiptop" in window) {
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -66,13 +68,14 @@ const Tariffs: FC = () => {
 				widget.pay('auth',
 					{
 						publicId: 'test_api_00000000000000000000002',
-						description: 'Оплата товаров в aipravo.kz',
+						description: 'Оплата запросов на aipravo.kz',
 						amount: req.cost,
 						currency: 'KZT',
-						accountId: 'user@example.com',
-						invoiceId: '1234567',
-						email: 'user@example.com',
-						skin: "mini",
+						// accountId: 'user@example.com',
+						// invoiceId: '1234567',
+						// email: 'user@example.com',
+						skin: "modern",
+						autoClose: 3,
 						data: { myProp: 'myProp value' }
 					},
 					{
