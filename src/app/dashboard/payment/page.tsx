@@ -67,10 +67,11 @@ const Tariffs: FC = () => {
 				const widget = new (window as any).tiptop.Widget(); // <--- Кастомный тип `any`
 				widget.pay('auth',
 					{
-						publicId: 'test_api_00000000000000000000002',
+						publicId: 'pk_acec0ef7b477906bfd88eb5215677',
 						description: 'Оплата запросов на aipravo.kz',
 						amount: req.cost,
 						currency: 'KZT',
+						// c4b94750db2fb374ec788672079f21e7
 						// accountId: 'user@example.com',
 						// invoiceId: '1234567',
 						// email: 'user@example.com',

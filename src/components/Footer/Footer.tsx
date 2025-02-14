@@ -42,7 +42,7 @@ const Footer: FC = () => {
 						<div className=" d-flex gap-5 flex-column flex-md-row align-items-center">
 							<ul className=' list-unstyled flex-column gap-3 m-0 footer_links d-flex text-center text-md-start'>
 								<li>
-									<span>ИП ЛАТЫПОВ</span>
+									<span>ИП Латыпов</span>
 								</li>
 								<li>
 									<span>РК, г. Алматы, мкр-н Кокмайса, д.39, офис 17</span>

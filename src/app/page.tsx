@@ -102,6 +102,37 @@ export default function Home() {
 											</ol>
 										</Accordion.Body>
 									</Accordion.Item>
+									<Accordion.Item eventKey="3">
+										<Accordion.Header>Пользовательские соглашения</Accordion.Header>
+										<Accordion.Body className='px-3 py-2'>
+											<ol className="list-group list-group-numbered ">
+												<li className="list-group-item border-0 px-3 py-1">
+													<Link
+														href={'/offer-agreement'}
+														className='accordion_link'
+													>
+														Договор оферты
+													</Link>
+												</li>
+												<li className="list-group-item border-0 px-3 py-1">
+													<Link
+														href={'/privacy-policy'}
+														className='accordion_link'
+													>
+														Политика конфиденциальности
+													</Link>
+												</li>
+												<li className="list-group-item border-0 px-3 py-1">
+													<Link
+														href={'/payment-info'}
+														className='accordion_link'
+													>
+														Информация об онлайн оплате
+													</Link>
+												</li>
+											</ol>
+										</Accordion.Body>
+									</Accordion.Item>
 								</Accordion>
 							</div>
 						</div>
