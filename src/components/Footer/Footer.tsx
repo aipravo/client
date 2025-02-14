@@ -8,7 +8,7 @@ const Footer: FC = () => {
 		<footer className='footer py-5'>
 			<div className=" container">
 				<div className="row justify-content-center justify-content-md-between align-items-center">
-					<div className=" col-12 col-md-auto order-1 order-md-0">
+					<div className=" col-12 col-md-auto order-1 order-md-0 mb-4">
 						<div className=" d-flex flex-column gap-2 align-items-center">
 							<div className=' d-flex gap-3'>
 								<Logo
@@ -40,27 +40,15 @@ const Footer: FC = () => {
 					</div>
 					<div className="col-12 col-md-auto order-0 order-md-1 mb-5 mb-md-0">
 						<div className=" d-flex gap-5 flex-column flex-md-row align-items-center">
-							<ul className=' list-unstyled flex-column gap-3 m-0 footer_links d-none d-md-flex'>
+							<ul className=' list-unstyled flex-column gap-3 m-0 footer_links d-flex text-center text-md-start'>
 								<li>
-									<Link
-										href={'/login'}
-									>
-										Авторизация
-									</Link>
+									<span>ИП ЛАТЫПОВ</span>
 								</li>
 								<li>
-									<Link
-										href={'/registration'}
-									>
-										Регистрация
-									</Link>
+									<span>РК, г. Алматы, мкр-н Кокмайса, д.39, офис 17</span>
 								</li>
 								<li>
-									<Link
-										href={'/reset'}
-									>
-										Сброс пароля
-									</Link>
+									<span>БИН (ИИН): 020219500067</span>
 								</li>
 							</ul>
 							<ul className=' list-unstyled d-flex flex-column gap-3 m-0 footer_links text-center text-md-start'>
