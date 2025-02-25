@@ -40,7 +40,7 @@ const Dashboard: FC = () => {
 
 
 	useEffect(() => {
-		scrollToBottom()
+		scrollToTop()
 	}, [])
 
 	const fetchRequest = useCallback(async () => {
@@ -189,6 +189,13 @@ const Dashboard: FC = () => {
 			chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight
 		}
 	}
+
+	const scrollToTop = () => {
+		if (chatContainerRef.current) {
+			chatContainerRef.current.scrollTop = 0;
+		}
+	};
+
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setContent(e.target.value)
