@@ -1,0 +1,5 @@
+[nixpacks]
+providers = ["nodejs"]
+
+[nodejs]
+version = "20"
