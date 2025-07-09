@@ -9,4 +9,5 @@ export interface IRegistration {
 
 export interface IRegistrationRes {
     message: string;
+    link: string;
 }

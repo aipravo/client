@@ -15,6 +15,7 @@ export default function Home() {
 	const [formData, setFormData] = useState<IRegistration>({ email: '', password: '', confirmPassword: '' });
 	const [error, setError] = useState('');
 	const [success, setSuccess] = useState('');
+	const [link, setLink] = useState('');
 	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,8 +26,9 @@ export default function Home() {
 		try {
 			const response: IRegistrationRes = await registration(formData);
 
-			setSuccess(response.message)
 
+			setSuccess(response.message)
+			setLink(response.link)
 		} catch (e) {
 			if (e instanceof Error) {
 				setError(e.message);
@@ -52,7 +54,7 @@ export default function Home() {
 			<div className='h100vh d-flex justify-content-center align-items-center'>
 				<div className="row">
 					<div className=" col col-lg-6 mx-auto">
-						<p className=' text-center'>{success}</p>
+						<p className=' text-center'>`${success} ${link}`</p>
 					</div>
 				</div>
 			</div>
