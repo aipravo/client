@@ -109,6 +109,11 @@ a {
 .home_title {
     color: var(--accent);
 }
+
+.accent {
+    color: var(--accent);
+}
+
 .home_title span {
     color: var(--dark);
 }

@@ -54,7 +54,7 @@ export default function Home() {
 			<div className='h100vh d-flex justify-content-center align-items-center'>
 				<div className="row">
 					<div className=" col col-lg-6 mx-auto">
-						<p className=' text-center'>Перейдите по <a href={link} target='_blank' rel='noopener noreferrer'>ссылке</a> для завершения регистрации.</p>
+						<p className=' text-center'>Перейдите по <a href={link} target='_blank' rel='noopener noreferrer' className='accent'>ссылке</a> для завершения регистрации.</p>
 					</div>
 				</div>
 			</div>
